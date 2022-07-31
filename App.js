@@ -1,11 +1,10 @@
 import React from 'react'
-import { StyleSheet, View } from 'react-native'
-import Main from './src/components/Main'
+import { StyleSheet, View, Text } from 'react-native'
 
 export default function App () {
   return (
     <View style={styles.container}>
-      <Main />
+      <Text style={styles.title}>Hello world!!</Text>
     </View>
   )
 }
@@ -13,8 +12,12 @@ export default function App () {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#292929',
     alignItems: 'center',
     justifyContent: 'center'
+  },
+  title: {
+    fontSize: 30,
+    color: '#fff'
   }
 })
