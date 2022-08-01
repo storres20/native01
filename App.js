@@ -1,12 +1,13 @@
 import React from 'react'
 import { StyleSheet, View, Text, Image } from 'react-native'
+import image from './assets/diamond-red.png'
 
 export default function App () {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Hello world!!</Text>
       <Image
-        source={{ uri: 'https://picsum.photos/200/200' }}
+        source={image}
         style={styles.image}
       />
     </View>
