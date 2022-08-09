@@ -1,14 +1,19 @@
 import React from 'react'
-import { StyleSheet, View, Text, Image } from 'react-native'
-import image from './assets/diamond-red.png'
+import { StyleSheet, View, Text, Image, Button, Alert } from 'react-native'
+// import image from './assets/diamond-red.png'
 
 export default function App () {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Hello world!!</Text>
       <Image
-        source={image}
+        source={{ uri: 'https://picsum.photos/200/200' }}
         style={styles.image}
+      />
+      <Button
+        title="Press Me"
+        color="red"
+        onPress={() => Alert.alert('Hello!!!')}
       />
     </View>
   )
@@ -25,5 +30,5 @@ const styles = StyleSheet.create({
     fontSize: 30,
     color: '#fff'
   },
-  image: { height: 200, width: 200 }
+  image: { height: 200, width: 200, borderRadius: 100 }
 })
