@@ -21,7 +21,7 @@ export default function App () {
     if (Platform.OS === 'web') {
       console.log('hello')
     } else {
-      setSelectedImage({ localUri: pickerResult })
+      setSelectedImage({ localUri: pickerResult.uri })
     }
   }
 
