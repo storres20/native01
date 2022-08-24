@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { StyleSheet, View, Text, Image, Button, TouchableOpacity } from 'react-native'
+import { StyleSheet, View, Text, Image, Button, TouchableOpacity, Platform } from 'react-native'
 import * as ImagePicker from 'expo-image-picker'
 import * as Sharing from 'expo-sharing'
 
@@ -18,8 +18,11 @@ export default function App () {
     if (pickerResult.cancelled === true) {
       return
     }
-
-    setSelectedImage({ localUri: pickerResult.uri })
+    if (Platform.OS === 'web') {
+      console.log('hello')
+    } else {
+      setSelectedImage({ localUri: pickerResult })
+    }
   }
 
   const openShareDialog = async () => {
